@@ -1,17 +1,15 @@
-const removeDup = (array) => {
-  for (let i=0; i < array.length; i++) {
-    for(let j=0; j < array.length; j++) {
-      if (array[i] === array[j]) {
-          if (i === j)
-          {
-          }
-          else {
-          array.splice(i, 1);
-          }
-      }
-      else {
-      }
-    }
+function toUrl(string){  // "jasmine ann"
+  let result = ""
+  
+  for (let i =0; i<string.length; i++) {
+  if(typeof(string) !== typeof("string")) {
+  return "not a string"
+  
+  }else if(string[i] !== " ")
+      result = result.concat(string[i])
+  
+  else if (string[i] === " ")
+     result =  result.concat("%20");
   }
-return array;
-}
+  return result;
+  }
